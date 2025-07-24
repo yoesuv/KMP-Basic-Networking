@@ -10,14 +10,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.yoesuv.kmpnetworking.core.models.PlaceModel
 
 @Composable
-fun ItemPlace(onItemClick: () -> Unit) {
+fun ItemPlace(placeModel: PlaceModel?, onItemClick: () -> Unit) {
     Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp).clickable {
         onItemClick()
     }) {
         Text(
-            "Item Place", style = TextStyle(
+            "${placeModel?.name}", style = TextStyle(
                 fontSize = 16.sp,
             )
         )
