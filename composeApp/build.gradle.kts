@@ -51,6 +51,10 @@ kotlin {
             implementation(libs.ktor.contentNegotiation)
             implementation(libs.ktor.json)
             implementation(libs.ktor.logging)
+            
+            // Coil for image loading
+            implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor)
         }
         iosMain.dependencies {
             implementation(libs.ktor.darwin)
@@ -91,4 +95,3 @@ android {
 dependencies {
     debugImplementation(compose.uiTooling)
 }
-
