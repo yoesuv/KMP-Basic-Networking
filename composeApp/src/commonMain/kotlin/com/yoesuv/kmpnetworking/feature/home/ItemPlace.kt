@@ -12,12 +12,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import com.yoesuv.kmpnetworking.core.models.PlaceModel
+import kmpnetworking.composeapp.generated.resources.Res
+import kmpnetworking.composeapp.generated.resources.placeholder_image
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun ItemPlace(placeModel: PlaceModel?, onItemClick: () -> Unit) {
@@ -30,6 +34,9 @@ fun ItemPlace(placeModel: PlaceModel?, onItemClick: () -> Unit) {
             AsyncImage(
                 model = placeModel?.thumbnailUrl,
                 contentDescription = placeModel?.name,
+                placeholder = painterResource(Res.drawable.placeholder_image),
+                error = painterResource(Res.drawable.placeholder_image),
+                contentScale = ContentScale.Crop,
                 modifier = Modifier.size(60.dp)
             )
             Column(modifier = Modifier.padding(horizontal = 10.dp)) {
