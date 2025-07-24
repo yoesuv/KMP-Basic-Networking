@@ -17,7 +17,7 @@ import com.yoesuv.kmpnetworking.core.models.PlaceModel
 
 @Composable
 fun ItemPlace(placeModel: PlaceModel?, onItemClick: () -> Unit) {
-    Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 4.dp).clickable {
+    Box(modifier = Modifier.fillMaxWidth().clickable {
         onItemClick()
     }) {
         Column {

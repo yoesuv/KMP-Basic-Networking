@@ -18,7 +18,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun App() {
     MaterialTheme(
         colorScheme = lightColorScheme(
-            primary = AppColors.EggShell
+            primary = AppColors.Teal
         ),
     ) {
         val navController = rememberNavController()
