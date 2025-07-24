@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.yoesuv.kmpnetworking.core.route.AppRoute
+import com.yoesuv.kmpnetworking.core.theme.AppColors
 
 
 @Composable
@@ -25,7 +26,9 @@ fun HomeScreen(
     val viewModel = viewModel { HomeViewModel() }
     val uiState by viewModel.uiState.collectAsState()
 
-    Scaffold { innerPadding ->
+    Scaffold(
+        containerColor = AppColors.EggShell
+    ) { innerPadding ->
         when (uiState) {
             is HomeUiState.Loading -> {
                 Box(
