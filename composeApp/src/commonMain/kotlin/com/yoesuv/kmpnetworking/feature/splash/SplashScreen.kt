@@ -16,7 +16,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.yoesuv.kmpnetworking.core.route.AppRoute
 import com.yoesuv.kmpnetworking.core.theme.AppColors
+import kmpnetworking.composeapp.generated.resources.Res
+import kmpnetworking.composeapp.generated.resources.app_name
 import kotlinx.coroutines.delay
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -37,7 +40,7 @@ fun SplashScreen(nav: NavHostController) {
         contentAlignment = Alignment.Center,
     ) {
         Text(
-            "KMP Networking", style = TextStyle(
+            stringResource(Res.string.app_name), style = TextStyle(
                 fontSize = 24.sp,
                 fontWeight = FontWeight.SemiBold,
             )

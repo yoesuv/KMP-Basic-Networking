@@ -10,7 +10,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarColors
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -25,6 +24,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.yoesuv.kmpnetworking.core.route.AppRoute
 import com.yoesuv.kmpnetworking.core.theme.AppColors
+import kmpnetworking.composeapp.generated.resources.Res
+import kmpnetworking.composeapp.generated.resources.list_place
+import org.jetbrains.compose.resources.stringResource
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -45,7 +47,7 @@ fun HomeScreen(
                 ),
                 title = {
                     Text(
-                        "Home", style = TextStyle(
+                        stringResource(Res.string.list_place), style = TextStyle(
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 18.sp,
                         )
