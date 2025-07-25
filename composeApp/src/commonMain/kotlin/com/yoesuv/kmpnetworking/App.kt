@@ -6,6 +6,7 @@ import androidx.compose.runtime.*
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
 import com.yoesuv.kmpnetworking.core.route.AppRoute
 import com.yoesuv.kmpnetworking.core.theme.AppColors
 import com.yoesuv.kmpnetworking.feature.detail.DetailScreen
@@ -28,7 +29,15 @@ fun App() {
         ) {
             composable<AppRoute.Splash> { SplashScreen(navController) }
             composable<AppRoute.Home> { HomeScreen(navController) }
-            composable<AppRoute.Detail> { DetailScreen(navController) }
+            composable<AppRoute.Detail> { backStackEntry ->
+                val route = backStackEntry.toRoute<AppRoute.Detail>()
+                DetailScreen(
+                    nav = navController,
+                    name = route.name,
+                    description = route.description,
+                    imageUrl = route.imageUrl
+                )
+            }
         }
     }
 }

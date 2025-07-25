@@ -56,7 +56,13 @@ fun HomeScreen(
                 LazyColumn(modifier = Modifier.padding(innerPadding)) {
                     items(places) { place ->
                         ItemPlace(placeModel = place, onItemClick = {
-                            nav.navigate(AppRoute.Detail)
+                            nav.navigate(
+                                AppRoute.Detail(
+                                    name = place.name,
+                                    description = place.description,
+                                    imageUrl = place.imageUrl
+                                )
+                            )
                         })
                     }
                 }
