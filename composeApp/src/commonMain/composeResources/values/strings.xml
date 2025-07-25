@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">KMP Networking</string>
     <string name="list_place">Daftar Tempat Wisata</string>
+    <string name="detail_place">Detail Tempat Wisata</string>
 </resources>

@@ -55,6 +55,7 @@ kotlin {
             // Coil for image loading
             implementation(libs.coil.compose)
             implementation(libs.coil.network.ktor)
+            implementation(libs.material.icons.extended)
         }
         iosMain.dependencies {
             implementation(libs.ktor.darwin)

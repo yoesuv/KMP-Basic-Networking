@@ -28,7 +28,7 @@ fun App() {
         ) {
             composable<AppRoute.Splash> { SplashScreen(navController) }
             composable<AppRoute.Home> { HomeScreen(navController) }
-            composable<AppRoute.Detail> { DetailScreen() }
+            composable<AppRoute.Detail> { DetailScreen(navController) }
         }
     }
 }

@@ -9,21 +9,16 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.yoesuv.kmpnetworking.core.route.AppRoute
 import com.yoesuv.kmpnetworking.core.theme.AppColors
+import com.yoesuv.kmpnetworking.feature.components.AppTopBar
 import kmpnetworking.composeapp.generated.resources.Res
 import kmpnetworking.composeapp.generated.resources.list_place
 import org.jetbrains.compose.resources.stringResource
@@ -40,19 +35,9 @@ fun HomeScreen(
     Scaffold(
         containerColor = AppColors.EggShell,
         topBar = {
-            TopAppBar(
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = AppColors.Teal,
-                    titleContentColor = Color.White
-                ),
-                title = {
-                    Text(
-                        stringResource(Res.string.list_place), style = TextStyle(
-                            fontWeight = FontWeight.SemiBold,
-                            fontSize = 18.sp,
-                        )
-                    )
-                }
+            AppTopBar(
+                title = stringResource(Res.string.list_place),
+                canBack = false,
             )
         }
     ) { innerPadding ->
