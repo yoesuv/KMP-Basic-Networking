@@ -1,6 +1,7 @@
 package com.yoesuv.kmpnetworking.feature.detail
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -16,7 +17,12 @@ import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailScreen(nav: NavHostController) {
+fun DetailScreen(
+    nav: NavHostController,
+    name: String,
+    description: String,
+    imageUrl: String
+) {
     Scaffold(
         containerColor = AppColors.EggShell,
         topBar = {
@@ -29,8 +35,12 @@ fun DetailScreen(nav: NavHostController) {
             )
         }
     ) { innerPadding ->
-        Box(modifier = Modifier.padding(innerPadding)) {
-            Text("Detail")
+        Column(modifier = Modifier.padding(innerPadding)) {
+            // You can use the parameters here to build your UI later
+            Text("Detail for: $imageUrl")
+            Text("Detail for: $name")
+            Text("Detail for: $description")
+            // The imageUrl and description are available for use in your UI
         }
     }
 }
