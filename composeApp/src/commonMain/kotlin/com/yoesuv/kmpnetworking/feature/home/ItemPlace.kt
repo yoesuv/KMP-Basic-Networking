@@ -4,7 +4,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
@@ -32,7 +34,7 @@ fun ItemPlace(placeModel: PlaceModel?, onItemClick: () -> Unit) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
-                model = placeModel?.thumbnailUrl,
+                model = placeModel?.imageUrl,
                 contentDescription = placeModel?.name,
                 placeholder = painterResource(Res.drawable.placeholder_image),
                 error = painterResource(Res.drawable.placeholder_image),
@@ -47,9 +49,10 @@ fun ItemPlace(placeModel: PlaceModel?, onItemClick: () -> Unit) {
                         color = Color.Black,
                     )
                 )
+                Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    "${placeModel?.name}", style = TextStyle(
-                        fontSize = 14.sp,
+                    "${placeModel?.location}", style = TextStyle(
+                        fontSize = 16.sp,
                         color = Color.Black,
                     )
                 )
