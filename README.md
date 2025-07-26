@@ -1,13 +1,13 @@
 ## KMP Basic Networking
 
-Create a simple app with a simple network request and display the results
+Create Kotlin Multiplatform app with a simple network request and display the results.
 
 #### Screnshot Android ####
 | ![](https://i.imgur.com/VVo81ZB.png) | ![](https://i.imgur.com/ANXtD1d.png) | ![](https://i.imgur.com/KjKwn8G.png) |
 | --- | --- | --- |
 
 #### Screnshot iOS ####
-| ![]() | ![]() | ![]() |
+| ![](https://i.imgur.com/X59AL2f.png) | ![](https://i.imgur.com/Hvez1WP.png) | ![](https://i.imgur.com/5gO3Hly.png) |
 | --- | --- | --- |
 
 #### List Library ####
