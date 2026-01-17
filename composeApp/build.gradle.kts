@@ -75,8 +75,8 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "1.0.1"
-        setProperty("archivesBaseName", "$applicationId-v$versionCode($versionName)")
+        versionName = "1.0.2"
+        setProperty("archivesBaseName", "$applicationId-v$versionName")
     }
     packaging {
         resources {
@@ -84,8 +84,11 @@ android {
         }
     }
     buildTypes {
-        getByName("release") {
+        getByName("debug") {
             isMinifyEnabled = false
+        }
+        getByName("release") {
+            isMinifyEnabled = true
         }
     }
     compileOptions {
