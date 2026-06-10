@@ -3,6 +3,7 @@ package com.yoesuv.kmpnetworking
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.*
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -12,7 +13,6 @@ import com.yoesuv.kmpnetworking.core.theme.AppColors
 import com.yoesuv.kmpnetworking.feature.detail.DetailScreen
 import com.yoesuv.kmpnetworking.feature.home.HomeScreen
 import com.yoesuv.kmpnetworking.feature.splash.SplashScreen
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
