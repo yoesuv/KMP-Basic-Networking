@@ -2,11 +2,19 @@ import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
+    base
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.kotlinSerialization)
+}
+
+val appApplicationId = "com.yoesuv.kmpnetworking"
+val appVersionName = "1.0.3"
+
+base {
+    archivesName.set("$appApplicationId-v$appVersionName")
 }
 
 kotlin {
@@ -65,15 +73,15 @@ kotlin {
 }
 
 android {
-    namespace = "com.yoesuv.kmpnetworking"
+    namespace = appApplicationId
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.yoesuv.kmpnetworking"
+        applicationId = appApplicationId
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "1.0.3"
+        versionName = appVersionName
     }
     packaging {
         resources {
