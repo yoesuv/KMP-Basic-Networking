@@ -94,6 +94,7 @@ android {
         }
         getByName("release") {
             isMinifyEnabled = true
+            isShrinkResources = true
         }
     }
     compileOptions {
